@@ -1,11 +1,11 @@
-
 from http.cookies import SimpleCookie
+
 
 def parse(query: str) -> dict:
     return {}
 
 
-
+if __name__ == '__main__':
     assert parse('https://example.com/path/to/page?name=ferret&color=purple') == {'name': 'ferret', 'color': 'purple'}
     assert parse('https://example.com/path/to/page?name=ferret&color=purple&') == {'name': 'ferret', 'color': 'purple'}
     assert parse('http://example.com/') == {}
@@ -37,4 +37,3 @@ if __name__ == '__main__':
     assert parse_cookie('name=Sarah;age=28;status=blocked;') == {'name': 'Sarah', 'age': '28', 'status': 'blocked'}
     assert parse_cookie('SSSrSSS=!!!!=User=22565;age=28;') == {'SSSrSSS': '!!!!=User=22565', 'age': '28'}
     assert parse_cookie('//1 }{ \\      //') == {}
-
