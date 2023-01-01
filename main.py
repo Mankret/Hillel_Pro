@@ -1,6 +1,3 @@
-import urllib.parse as urlparse
-
-
 def parse(query: str) -> dict:
     return {}
 
@@ -11,6 +8,8 @@ if __name__ == '__main__':
     assert parse('http://example.com/') == {}
     assert parse('http://example.com/?') == {}
     assert parse('http://example.com/?name=Dima') == {'name': 'Dima'}
+
+from http.cookies import SimpleCookie
 
 
 def parse_cookie(query: str) -> dict:
