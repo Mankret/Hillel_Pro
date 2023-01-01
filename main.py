@@ -1,4 +1,4 @@
-from http.cookies import SimpleCookie
+import urllib.parse as urlparse
 
 
 def parse(query: str) -> dict:
